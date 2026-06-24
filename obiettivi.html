@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obiettivi - Skate Journal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+    <div class="brand">
+        <div class="logo">🛹</div>
+        <div>
+            <h1>SKATE JOURNAL</h1>
+            <p>Trick, progressi, sessioni, obiettivi.</p>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="window.location.href='index.html'">🏠<span>Home</span></button>
+        <button onclick="window.location.href='sessioni.html'">🛹<span>Sessioni</span></button>
+        <button onclick="window.location.href='calendario.html'">📆<span>Calendario</span></button>
+        <button onclick="window.location.href='statistiche.html'">📊<span>Stats</span></button>
+        <button onclick="window.location.href='obiettivi.html'">🎯<span>Obiettivi</span></button>
+        <button onclick="window.location.href='consigli.html'">💡<span>Consigli</span></button>
+		<button onclick="window.location.href='badge.html'">🏅<span>Badge</span></button>
+    </div>
+</nav>
+
+<main class="app">
+
+    <section class="card">
+        <h2>🎯 Nuovo Obiettivo</h2>
+
+        <label>Descrizione obiettivo</label>
+
+        <input type="text"
+               id="testoObiettivo"
+               placeholder="Es. Chiudere Kickflip 3 volte">
+
+        <br><br>
+
+        <button class="main-btn"
+                onclick="aggiungiObiettivo()">
+            ＋ Aggiungi Obiettivo
+        </button>
+
+    </section>
+
+    <section class="card">
+        <h2>📈 Progressi Settimanali</h2>
+
+        <div id="riepilogoObiettivi"
+             class="stats-grid">
+        </div>
+
+    </section>
+
+    <section class="card">
+        <h2>🏆 I Tuoi Obiettivi</h2>
+
+        <div id="listaObiettivi"></div>
+
+    </section>
+
+</main>
+
+<footer>
+    🛹 Skate more. Progress every day.
+</footer>
+
+<script src="obiettivi.js"></script>
+
+</body>
+</html>

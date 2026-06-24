@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistiche - Skate Journal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+    <div class="brand">
+        <div class="logo">🛹</div>
+        <div>
+            <h1>SKATE JOURNAL</h1>
+            <p>Trick, progressi, sessioni, obiettivi.</p>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="window.location.href='index.html'">🏠<span>Home</span></button>
+        <button onclick="window.location.href='sessioni.html'">🛹<span>Sessioni</span></button>
+        <button onclick="window.location.href='calendario.html'">📆<span>Calendario</span></button>
+        <button onclick="window.location.href='statistiche.html'">📊<span>Stats</span></button>
+        <button onclick="window.location.href='obiettivi.html'">🎯<span>Obiettivi</span></button>
+        <button onclick="window.location.href='consigli.html'">💡<span>Consigli</span></button>
+		<button onclick="window.location.href='badge.html'">🏅<span>Badge</span></button>
+    </div>
+</nav>
+
+<main class="app">
+
+    <section class="card">
+        <h2>📊 Statistiche Generali</h2>
+
+        <div id="statistiche" class="stats-grid">
+        </div>
+
+    </section>
+
+    <section class="card">
+        <h2>🏆 Progressi</h2>
+
+        <p>
+            Qui potrai vedere tutti i tuoi progressi nello skate,
+            il tempo totale skateato e i trick chiusi.
+        </p>
+
+    </section>
+
+</main>
+
+<footer>
+    🛹 Skate more. Progress every day.
+</footer>
+
+<script src="statistiche.js"></script>
+
+</body>
+</html>

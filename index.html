@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skate Journal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+    <div class="brand">
+        <div class="logo">🛹</div>
+        <div>
+            <h1>SKATE JOURNAL</h1>
+            <p>Trick, progressi, sessioni, obiettivi.</p>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="window.location.href='index.html'">🏠<span>Home</span></button>
+        <button onclick="window.location.href='sessioni.html'">🛹<span>Sessioni</span></button>
+        <button onclick="window.location.href='calendario.html'">📆<span>Calendario</span></button>
+        <button onclick="window.location.href='statistiche.html'">📊<span>Stats</span></button>
+        <button onclick="window.location.href='obiettivi.html'">🎯<span>Obiettivi</span></button>
+        <button onclick="window.location.href='consigli.html'">💡<span>Consigli</span></button>
+		<button onclick="window.location.href='badge.html'">🏅<span>Badge</span></button>
+    </div>
+</nav>
+
+<main class="app">
+
+    <section class="card">
+        <h2>📊 Riepilogo</h2>
+        <div id="riepilogoTrick" class="stats-grid">
+            Nessun trick inserito ancora.
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>🛹 Aggiungi nuovo trick</h2>
+
+        <div class="form-grid">
+            <div>
+                <label>Nome Trick</label>
+                <input type="text" id="nomeTrick" placeholder="Es. Kickflip">
+            </div>
+
+            <div>
+                <label>Categoria</label>
+                <select id="categoriaTrick">
+                    <option>Flatground</option>
+                    <option>Manual</option>
+                    <option>Grind / Slide</option>
+                    <option>Rampa</option>
+                    <option>Altro</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Stato</label>
+                <select id="statoTrick">
+                    <option>Da provare</option>
+                    <option>In allenamento</option>
+                    <option>Quasi chiuso</option>
+                    <option>Chiuso</option>
+                    <option>Da perfezionare</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Tentativi</label>
+                <input type="number" id="tentativi" placeholder="Es. 10">
+            </div>
+
+            <div>
+                <label>Chiusure</label>
+                <input type="number" id="chiusure" placeholder="Es. 3">
+            </div>
+
+            <div class="button-box">
+                <button class="main-btn" onclick="aggiungiTrick()">＋ Aggiungi Trick</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>🔍 Cerca Trick</h2>
+        <input type="text" id="ricercaTrick" placeholder="Cerca un trick..." onkeyup="mostraTricks()">
+    </section>
+
+    <section class="card">
+        <h2>☰ I tuoi trick</h2>
+        <div id="listaTrick"></div>
+    </section>
+
+</main>
+
+<footer>
+    🛹 Skate more. Progress every day.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

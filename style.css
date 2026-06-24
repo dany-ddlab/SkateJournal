@@ -1,0 +1,372 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #111;
+    background-image: url("sfondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: -1;
+}
+
+.topbar {
+    background: rgba(0, 0, 0, 0.96);
+    color: white;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo {
+    font-size: 48px;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 42px;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.brand p {
+    margin: 5px 0 0;
+    color: #f0d8a8;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-buttons button {
+    width: 90px;
+    height: 82px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    background: #090909;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-buttons button span {
+    display: block;
+    font-size: 12px;
+    margin-top: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-buttons button:hover {
+    background: #fffaf0;
+    color: #111;
+}
+
+.app {
+    width: min(1000px, 92%);
+    margin: 32px auto;
+}
+
+.card {
+    background: rgba(255, 250, 240, 0.94);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 7px 7px 0 rgba(0,0,0,0.85);
+    backdrop-filter: blur(6px);
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.stat-box {
+    background: rgba(255,255,255,0.75);
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 22px;
+    text-align: center;
+}
+
+.stat-box .number {
+    font-size: 42px;
+    font-weight: 900;
+}
+
+.stat-box .label {
+    font-weight: bold;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    align-items: end;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255,255,255,0.9);
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main-btn {
+    width: 100%;
+    background: #050505;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.main-btn:hover {
+    background: #222;
+}
+
+.trick {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 160px;
+    gap: 18px;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+.trick:last-child {
+    border-bottom: none;
+}
+
+.trick-title {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.trick p {
+    margin: 8px 0 0;
+    line-height: 1.6;
+}
+
+.progress-area {
+    text-align: center;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #ddd;
+    border-radius: 20px;
+    margin-top: 18px;
+    position: relative;
+    overflow: visible;
+}
+
+.progress {
+    height: 100%;
+    background: #e58a00;
+    border-radius: 20px;
+}
+
+.skate-icon {
+    position: absolute;
+    top: -18px;
+    transform: translateX(-50%);
+    font-size: 24px;
+    z-index: 10;
+}
+
+.actions button {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #d8cbb8;
+    background: #fff7e8;
+}
+
+.actions .delete {
+    color: #d10000;
+    border-color: #d10000;
+    background: #fffafa;
+}
+
+.trick-highlight {
+    background: #b8f5c8;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+footer {
+    width: min(1000px, 92%);
+    margin: 20px auto;
+    background: rgba(0,0,0,0.95);
+    color: #f0d8a8;
+    padding: 18px 28px;
+    border-radius: 14px;
+    font-weight: bold;
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.calendar-header button {
+    width: 55px;
+    background: #ffb347;
+    border: 2px solid #222;
+}
+
+.week-days,
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 7px;
+    text-align: center;
+}
+
+.week-days {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.day {
+    padding: 12px 0;
+    border: 2px solid #222;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.day.empty {
+    border: none;
+    background: transparent;
+    cursor: default;
+}
+
+.day.has-session {
+    background: #7ed6a5;
+    box-shadow: 3px 3px 0 #222;
+}
+
+.obiettivo-completato {
+    background: #b8f5c8;
+    border-radius: 15px;
+    text-decoration: line-through;
+    opacity: 0.85;
+}
+
+@media (max-width: 800px) {
+    .topbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .brand h1 {
+        font-size: 32px;
+    }
+
+    .nav-buttons {
+        justify-content: center;
+    }
+
+    .nav-buttons button {
+        width: 75px;
+        height: 70px;
+        font-size: 20px;
+    }
+
+    .form-grid,
+    .stats-grid,
+    .trick {
+        grid-template-columns: 1fr;
+    }
+}
+.badge-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.badge-card {
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background: rgba(255,255,255,0.85);
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.8);
+}
+
+.badge-icon {
+    font-size: 46px;
+    margin-bottom: 10px;
+}
+
+.badge-unlocked {
+    background: #fff7e8;
+}
+
+.badge-locked {
+    opacity: 0.45;
+    filter: grayscale(1);
+}
+
+@media (max-width: 800px) {
+    .badge-grid {
+        grid-template-columns: 1fr;
+    }
+}

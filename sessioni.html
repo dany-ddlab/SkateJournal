@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sessioni - Skate Journal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+    <div class="brand">
+        <div class="logo">🛹</div>
+        <div>
+            <h1>SKATE JOURNAL</h1>
+            <p>Trick, progressi, sessioni, obiettivi.</p>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="window.location.href='index.html'">🏠<span>Home</span></button>
+        <button onclick="window.location.href='sessioni.html'">🛹<span>Sessioni</span></button>
+        <button onclick="window.location.href='calendario.html'">📆<span>Calendario</span></button>
+        <button onclick="window.location.href='statistiche.html'">📊<span>Stats</span></button>
+        <button onclick="window.location.href='obiettivi.html'">🎯<span>Obiettivi</span></button>
+        <button onclick="window.location.href='consigli.html'">💡<span>Consigli</span></button>
+		<button onclick="window.location.href='badge.html'">🏅<span>Badge</span></button>
+    </div>
+</nav>
+
+<main class="app">
+
+    <section class="card">
+        <h2>📅 Nuova Sessione</h2>
+
+        <div class="form-grid">
+            <div>
+                <label>Data</label>
+                <input type="date" id="dataSessione">
+            </div>
+
+            <div>
+                <label>Spot</label>
+                <input type="text" id="spotSessione" placeholder="Es. Skatepark Cagliari">
+            </div>
+
+            <div>
+                <label>Durata</label>
+                <input type="number" id="durataSessione" placeholder="Minuti">
+            </div>
+        </div>
+
+        <br>
+
+        <label>Trick provati</label>
+        <textarea id="trickProvati" placeholder="Es. Kickflip, FS 180"></textarea>
+
+        <br><br>
+
+        <label>Trick chiusi</label>
+        <textarea id="trickChiusi" placeholder="Es. Ollie, Shove-it"></textarea>
+
+        <br><br>
+
+        <label>Note</label>
+        <textarea id="noteSessione" placeholder="Com'è andata la sessione?"></textarea>
+
+        <br><br>
+
+        <button class="main-btn" onclick="aggiungiSessione()">
+            ＋ Salva Sessione
+        </button>
+    </section>
+
+    <section class="card">
+        <h2>📖 Storico Sessioni</h2>
+        <div id="listaSessioni"></div>
+    </section>
+
+</main>
+
+<footer>
+    🛹 Skate more. Progress every day.
+</footer>
+
+<script src="sessioni.js"></script>
+
+</body>
+</html>

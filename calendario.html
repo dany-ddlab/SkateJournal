@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario - Skate Journal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar">
+    <div class="brand">
+        <div class="logo">🛹</div>
+        <div>
+            <h1>SKATE JOURNAL</h1>
+            <p>Trick, progressi, sessioni, obiettivi.</p>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="window.location.href='index.html'">🏠<span>Home</span></button>
+        <button onclick="window.location.href='sessioni.html'">🛹<span>Sessioni</span></button>
+        <button onclick="window.location.href='calendario.html'">📆<span>Calendario</span></button>
+        <button onclick="window.location.href='statistiche.html'">📊<span>Stats</span></button>
+        <button onclick="window.location.href='obiettivi.html'">🎯<span>Obiettivi</span></button>
+        <button onclick="window.location.href='consigli.html'">💡<span>Consigli</span></button>
+		<button onclick="window.location.href='badge.html'">🏅<span>Badge</span></button>
+    </div>
+</nav>
+
+<main class="app">
+
+    <section class="card">
+
+        <div class="calendar-header">
+            <button onclick="mesePrecedente()">←</button>
+
+            <h2 id="meseAnno">Caricamento...</h2>
+
+            <button onclick="meseSuccessivo()">→</button>
+        </div>
+
+        <br>
+
+        <div class="week-days">
+            <span>Lun</span>
+            <span>Mar</span>
+            <span>Mer</span>
+            <span>Gio</span>
+            <span>Ven</span>
+            <span>Sab</span>
+            <span>Dom</span>
+        </div>
+
+        <div id="calendario" class="calendar-grid"></div>
+
+    </section>
+
+    <section class="card">
+        <h2>📅 Sessioni del Giorno</h2>
+
+        <div id="sessioniGiorno">
+            Seleziona un giorno del calendario.
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    🛹 Skate more. Progress every day.
+</footer>
+
+<script src="calendario.js"></script>
+
+</body>
+</html>
