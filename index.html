@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-	<link rel="apple-touch-icon" href="./icon-512.png">
-<link rel="manifest" href="./manifest.json">
-<meta name="theme-color" content="#000000">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skate Journal</title>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./icon-512.png">
+    <meta name="theme-color" content="#000000">
 </head>
 <body>
+
+<div id="splash-screen">
+    <div class="splash-content">
+        <h1 class="splash-title">SKATE</h1>
+        <h2 class="splash-subtitle">JOURNAL</h2>
+        <p class="splash-text">SKATE MORE. PROGRESS EVERY DAY.</p>
+
+        <div class="kickflip-area">
+            <div class="ollie-board">🛹</div>
+        </div>
+
+        <p class="loading-text">CARICAMENTO...</p>
+
+        <div class="loading-bar">
+            <div class="loading-progress">
+                <span class="loading-skate">🛹</span>
+            </div>
+        </div>
+    </div>
+</div>
 
 <nav class="topbar">
     <div class="brand">
@@ -27,7 +48,7 @@
         <button onclick="window.location.href='statistiche.html'">📊<span>Stats</span></button>
         <button onclick="window.location.href='obiettivi.html'">🎯<span>Obiettivi</span></button>
         <button onclick="window.location.href='consigli.html'">💡<span>Consigli</span></button>
-		<button onclick="window.location.href='badge.html'">🏅<span>Badge</span></button>
+        <button onclick="window.location.href='badge.html'">🏅<span>Badge</span></button>
     </div>
 </nav>
 
@@ -101,9 +122,24 @@
 
 <footer>
     <h3>🛹 Skate more. Progress every day.</h3>
-	<p>Created By @Daniele Pischedda</p>
+    <p>Created by @Daniele Pischedda</p>
 </footer>
 
 <script src="script.js"></script>
+
+<script>
+window.addEventListener("load", function () {
+    setTimeout(function () {
+        document.getElementById("splash-screen").classList.add("hide-splash");
+    }, 2600);
+});
+
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./service-worker.js")
+        .then(() => console.log("Service Worker registrato"))
+        .catch(err => console.log("Errore SW:", err));
+}
+</script>
+
 </body>
 </html>
