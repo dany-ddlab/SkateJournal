@@ -19,7 +19,7 @@ const urlsToCache = [
     "./badge.js",
     "./manifest.json",
     "./sfondo.jpeg",
-    "./icons/icon-512.png"
+    "./icon-512.png"
 ];
 
 self.addEventListener("install", event => {
